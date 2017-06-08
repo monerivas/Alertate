@@ -8,28 +8,34 @@
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../css/materialize.min.css">
     <link rel="stylesheet" href="../css/mapa.css">
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 
 <body class="grey lighten-2">
-    <header class="navbar-fixed">
-      <nav class="pink darken-4">
-        <i class="medium material-icons white-text dropdown-button" data-activates="opcsMenu">
-          menu
-        </i>
-        <!-- Opciones menu -->
-        <ul id="opcsMenu" class="dropdown-content">
-          <li><a href=""><i class="material-icons pink-text text-darken-4">add_alert</i>Alertas</a></li>
-          <li><a href=""><i class="material-icons pink-text text-darken-4">warning</i>Mapa Zonas Rojas</a></li>
-          <li><a href=""><i class="material-icons pink-text text-darken-4">announcement</i>Comentarios</a></li>
-          <li><a href=""><i class="material-icons pink-text text-darken-4">contact_phone</i>Directorio</a></li>
-          <li><a href=""><i class="material-icons pink-text text-darken-4">info</i>Acerca de</a></li>
-        </ul>
-        <!-- LOGO  -->
-        <a href="#" class="brand-logo right">
-          <img src="" alt="">
-        </a>
-      </nav>
-    </header>
+  <header class="navbar-fixed">
+    <nav class="pink darken-4">
+      <i class="medium material-icons white-text dropdown-button col s1" data-activates="opcsMenu">
+        menu
+      </i>
+      <!-- Opciones menu -->
+      <ul id="opcsMenu" class="dropdown-content">
+        <li><a href=""><i class="material-icons pink-text text-darken-4">menu</i></a></li>
+        <li id="config_alerta"><a ><i class="material-icons pink-text text-darken-4">add_alert</i>Alertas</a></li>
+        <li><a href="#"><i class="material-icons pink-text text-darken-4">warning</i>Mapa Zonas Rojas</a></li>
+        <li><a href="comentarios.html"><i class="material-icons pink-text text-darken-4">announcement</i>Comentarios</a></li>
+        <li><a href="directorio.html"><i class="material-icons pink-text text-darken-4">contact_phone</i>Directorio</a></li>
+        <li><a href="" id="acerca_de"><i class="material-icons pink-text text-darken-4">info</i>Acerca de</a></li>
+      </ul>
+      <!-- LOGO  -->
+      <div class="">
+        <div class="logo">
+          <a href="../index.html">
+            <img src="../assets/img/alertate_logo_blanco.png" alt="logo" class="">
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
 
     <div class="input-field col s12">
         <i class="material-icons prefix">my_location</i>
@@ -50,6 +56,7 @@
     <script src="../js/jquery-3.2.1.min.js"></script>
     <script src="../js/materialize.min.js"></script>
     <script src="../js/mapa.js"></script>
+    <script src="../js/app.js"></script>
 </body>
 
 </html>
