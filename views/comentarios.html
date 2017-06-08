@@ -8,26 +8,36 @@
       <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <link type="text/css" rel="stylesheet" href="../css/materialize.min.css" media="screen,projection" />
       <link rel="stylesheet" href="../css/comentarios.css">
+      <link rel="stylesheet" href="../css/main.css">
   </head>
   <body>
-    <header>
-      <i class="medium material-icons pink-text text-darken-4 dropdown-button" data-activates="opcsMenu">
-        menu
-      </i>
-      <!-- Opciones menu -->
-      <ul id="opcsMenu" class="dropdown-content">
-        <li><a href=""><i class="material-icons pink-text text-darken-4">add_alert</i>Alertas</a></li>
-        <li><a href=""><i class="material-icons pink-text text-darken-4">warning</i>Mapa Zonas Rojas</a></li>
-        <li><a href=""><i class="material-icons pink-text text-darken-4">announcement</i>Comentarios</a></li>
-        <li><a href=""><i class="material-icons pink-text text-darken-4">contact_phone</i>Directorio</a></li>
-        <li><a href=""><i class="material-icons pink-text text-darken-4">info</i>Acerca de</a></li>
-      </ul>
+    <header class="navbar-fixed">
+      <nav class="pink darken-4">
+        <i class="medium material-icons white-text dropdown-button col s1" data-activates="opcsMenu">
+          menu
+        </i>
+        <!-- Opciones menu -->
+        <ul id="opcsMenu" class="dropdown-content">
+          <li><a href=""><i class="material-icons pink-text text-darken-4">menu</i></a></li>
+          <li><a href="" id="config_alerta"><i class="material-icons pink-text text-darken-4">add_alert</i>Alertas</a></li>
+          <li><a href="mapa.html"><i class="material-icons pink-text text-darken-4">warning</i>Mapa Zonas Rojas</a></li>
+          <li><a href="comentarios.html"><i class="material-icons pink-text text-darken-4">announcement</i>Comentarios</a></li>
+          <li><a href="directorio.html"><i class="material-icons pink-text text-darken-4">contact_phone</i>Directorio</a></li>
+          <li><a href="" id="acerca_de"><i class="material-icons pink-text text-darken-4">info</i>Acerca de</a></li>
+        </ul>
+        <!-- LOGO  -->
+        <div class="">
+          <div class="logo">
+            <img src="../assets/img/alertate_logo_blanco.png" alt="logo" class="">
+          </div>
+        </div>
+      </nav>
     </header>
-    <section>
+    <section id="formulario-comentarios">
       <div class="container col s12">
         <div class="row">
           <h3>Comentarios</h3>
-          <form action="#">
+          <form id="comentarios">
             <!-- Nombre -->
             <div class="input-field col s12">
               <input id="icon_prefix" type="text" class="validate">
@@ -65,7 +75,7 @@
             </section>
             <div class="container boton-enviar">
               <div class="row">
-                <button class="btn waves-effect waves-light" type="submit" name="action">Enviar
+                <button id="enviar" class="btn waves-effect waves-light" type="submit" name="action">Enviar
                   <i class="material-icons right">send</i>
                 </button>
               </div>
@@ -75,6 +85,9 @@
       </div>
     </section>
     <!-- Comentarios Domi -->
+    <section id="aqui-comentarios">
+
+    </section>
     <section class="container">
       <div class="comentario-domi">
         <h6>Yesenia</h6>
@@ -88,6 +101,9 @@
       </div>
     </section>
 
+    <section class="ver-mas">
+      <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+    </section>
 
     <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="../js/materialize.min.js"></script>

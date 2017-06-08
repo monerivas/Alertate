@@ -12,3 +12,15 @@ h3{
 .boton-enviar button{
   width: 100%;
 }
+
+.mi-comentario{
+  border: 1px solid #000;
+  padding: 2%;
+  border-radius: 5px;
+  margin-bottom: 2%;
+}
+
+.ver-mas{
+  float: right;
+  margin: 2% 5%;
+}
