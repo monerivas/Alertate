@@ -1,0 +1,16 @@
+#modalDatos button{
+    width: 100%;
+}
+
+.boton-alerta{
+    display: block;
+    width: 70vw;
+    border-radius: 50%;
+    border: 3px solid red;
+    padding: 9% 4% 9% 3%;
+    background: #a71313;
+}
+
+.boton-alerta img{
+    height: 20vh;
+}

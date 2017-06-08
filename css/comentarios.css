@@ -12,3 +12,8 @@ h3{
 .boton-enviar button{
   width: 100%;
 }
+
+.ver-mas{
+  float: right;
+  margin: 2% 5%;
+}
