@@ -11,8 +11,24 @@
     <title>Menu</title>
   </head>
   <body class="grey lighten-2">
-    <header>
-      <i class="medium material-icons pink-text text-darken-4">menu</i>
+    <header class="navbar-fixed">
+      <nav class="pink darken-4">
+        <i class="medium material-icons white-text dropdown-button" data-activates="opcsMenu">
+          menu
+        </i>
+        <!-- Opciones menu -->
+        <ul id="opcsMenu" class="dropdown-content">
+          <li><a href=""><i class="material-icons pink-text text-darken-4">add_alert</i>Alertas</a></li>
+          <li><a href=""><i class="material-icons pink-text text-darken-4">warning</i>Mapa Zonas Rojas</a></li>
+          <li><a href=""><i class="material-icons pink-text text-darken-4">announcement</i>Comentarios</a></li>
+          <li><a href=""><i class="material-icons pink-text text-darken-4">contact_phone</i>Directorio</a></li>
+          <li><a href=""><i class="material-icons pink-text text-darken-4">info</i>Acerca de</a></li>
+        </ul>
+        <!-- LOGO  -->
+        <a href="#" class="brand-logo right">
+          <img src="" alt="">
+        </a>
+      </nav>
     </header>
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
