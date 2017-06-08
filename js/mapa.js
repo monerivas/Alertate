@@ -1,46 +1,47 @@
-var cargarPagina = function () {
-	obtenerCoordendas();
-};
+var locations = [
+  {lat: 19.425928, lng: -99.133006},
+  {lat: 19.426074, lng: -99.134204},
+  {lat: 19.426135, lng: -99.132949},
+  {lat: 19.447136, lng: -99.152049},
+  {lat: 19.446259, lng:  -99.152089},
+  {lat: 19.423619, lng:  -99.163293},
+  {lat:19.4164234, lng:-99.16511009999999},
+  {lat:19.4163278, lng:-99.16522739999999},
+  {lat:19.4163278, lng:-99.16522739999999}
+]
 
-var obtenerCoordendas = function () {
-	var coordenadas = {
-        lat:19.4177435,
-        lng:-99.16479129999999
-	};
-	mostrarMapa(coordenadas);
-};
+ function initMap() {
 
-var mostrarMapa = function (coordenadas) {
-	var map = new google.maps.Map($('#map')[0], {
-      zoom: 17,
-      center: coordenadas
-    });
-    var marker = new google.maps.Marker({
-      position: coordenadas,
-      map: map
-    });
+   var mostrarPosicion= function(posicion){
+     var map = new google.maps.Map(document.getElementById('map'), {
+       zoom: 13,
+       center: {lat: posicion.coords.latitude, lng: posicion.coords.longitude}
+       });
+     var marker = new google.maps.Marker({
+       position: {lat: posicion.coords.latitude, lng: posicion.coords.longitude},
+       map: map
+     });
+
+
+        // Create an array of alphabetical characters used to label the markers.
+        var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+        // Add some markers to the map.
+        // Note: The code uses the JavaScript Array.prototype.map() method to
+        // create an array of markers based on a given "locations" array.
+        // The map() method here has nothing to do with the Google Maps API.
+        var markers = locations.map(function(location, i) {
+          return new google.maps.Marker({
+            position: location,
+            label: labels[i % labels.length]
+          });
+        });
+
+        // Add a marker clusterer to manage the markers.
+        var markerCluster = new MarkerClusterer(map, markers,
+            {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
 }
 
+navigator.geolocation.getCurrentPosition(mostrarPosicion);
 
-function load() {
-      if (GBrowserIsCompatible()) {
-        var map = new GMap2(document.getElementById("map"));
-        map.setCenter(new GLatLng(-19.435514, 48.603516), 5);
-        map.addControl(new GMapTypeControl());
-        map.addControl(new GLargeMapControl());
-        map.addControl(new GScaleControl());
-        map.addControl(new GOverviewMapControl());
-        map.setMapType(G_HYBRID_TYPE);
-        function addtag(point, address) {
-        var marker = new GMarker(point);
-        GEvent.addListener(marker, "click", function() { 
-	marker.openInfoWindowHtml(address); } );
-        return marker;
-        }
-        var point = new GLatLng(-19.000514,46.603516);
-        var address = '<b>MADAGASCAR</b><br/><i>Centro de Madagascar</i><br /><a href="http://www.centrodemadagascar.com">Web del Centro de Madagascar</a>';
-        var marker = addtag(point, address);
-       map.addOverlay(marker);
-      }
-    }
-$(document).ready(cargarPagina);
+ }

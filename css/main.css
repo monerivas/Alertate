@@ -1,0 +1,7 @@
+.logo{
+  margin-top: -15%;
+}
+div.logo>img{
+  float: right;
+  width: 30%;
+}
