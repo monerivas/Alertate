@@ -1,0 +1,14 @@
+h3{
+  text-align: center;
+}
+
+.comentario-domi{
+  border: 1px solid #000;
+  padding: 2%;
+  border-radius: 5px;
+  margin-bottom: 2%;
+}
+
+.boton-enviar button{
+  width: 100%;
+}
