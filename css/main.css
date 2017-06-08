@@ -1,7 +1,7 @@
 .logo{
   margin-top: -15%;
 }
-div.logo>img{
+div.logo>a>img{
   float: right;
   width: 30%;
 }
