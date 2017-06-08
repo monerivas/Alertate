@@ -2,13 +2,23 @@
     width: 100%;
 }
 
+.contenedorBotonModal{
+    display: flex;
+    height: 100vh;
+    align-items: center; 
+}
+
 .boton-alerta{
-    display: block;
+    background-image: url(../assets/img/botonAlerta.png);
+    background-repeat: no-repeat;
+    background-position: center;
     width: 70vw;
+    height: 100%;
     border-radius: 50%;
-    border: 3px solid red;
-    padding: 9% 4% 9% 3%;
+    padding: 30% 20%;
+/*
     background: #a71313;
+*/
 }
 
 .boton-alerta img{
