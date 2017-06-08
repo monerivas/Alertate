@@ -21,4 +21,26 @@ var mostrarMapa = function (coordenadas) {
     });
 }
 
+
+function load() {
+      if (GBrowserIsCompatible()) {
+        var map = new GMap2(document.getElementById("map"));
+        map.setCenter(new GLatLng(-19.435514, 48.603516), 5);
+        map.addControl(new GMapTypeControl());
+        map.addControl(new GLargeMapControl());
+        map.addControl(new GScaleControl());
+        map.addControl(new GOverviewMapControl());
+        map.setMapType(G_HYBRID_TYPE);
+        function addtag(point, address) {
+        var marker = new GMarker(point);
+        GEvent.addListener(marker, "click", function() { 
+	marker.openInfoWindowHtml(address); } );
+        return marker;
+        }
+        var point = new GLatLng(-19.000514,46.603516);
+        var address = '<b>MADAGASCAR</b><br/><i>Centro de Madagascar</i><br /><a href="http://www.centrodemadagascar.com">Web del Centro de Madagascar</a>';
+        var marker = addtag(point, address);
+       map.addOverlay(marker);
+      }
+    }
 $(document).ready(cargarPagina);
