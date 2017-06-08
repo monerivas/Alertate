@@ -11,6 +11,7 @@ var locations = [
 ]
 
  function initMap() {
+     
 
    var mostrarPosicion= function(posicion){
      var map = new google.maps.Map(document.getElementById('map'), {
@@ -44,4 +45,4 @@ var locations = [
 
 navigator.geolocation.getCurrentPosition(mostrarPosicion);
 
- }
+}

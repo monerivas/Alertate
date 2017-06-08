@@ -2,33 +2,33 @@
 <html lang="es">
 
 <head>
-
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Alertate</title>
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../css/materialize.min.css">
+    <link rel="stylesheet" href="../css/mapa.css">
 </head>
+
 <body class="grey lighten-2">
     <header class="navbar-fixed">
-        <nav class="pink darken-4">
-            <i class="medium material-icons white-text dropdown-button" data-activates="opcsMenu">
+      <nav class="pink darken-4">
+        <i class="medium material-icons white-text dropdown-button" data-activates="opcsMenu">
           menu
         </i>
-            <!-- Opciones menu -->
-            <ul id="opcsMenu" class="dropdown-content">
-                <li><a href=""><i class="material-icons pink-text text-darken-4">add_alert</i>Alertas</a></li>
-                <li><a href=""><i class="material-icons pink-text text-darken-4">warning</i>Mapa Zonas Rojas</a></li>
-                <li><a href=""><i class="material-icons pink-text text-darken-4">announcement</i>Comentarios</a></li>
-                <li><a href=""><i class="material-icons pink-text text-darken-4">contact_phone</i>Directorio</a></li>
-                <li><a href=""><i class="material-icons pink-text text-darken-4">info</i>Acerca de</a></li>
-            </ul>
-            <!-- LOGO  -->
-            <a href="#" class="brand-logo right">
-                <img src="" alt="">
-            </a>
-        </nav>
+        <!-- Opciones menu -->
+        <ul id="opcsMenu" class="dropdown-content">
+          <li><a href=""><i class="material-icons pink-text text-darken-4">add_alert</i>Alertas</a></li>
+          <li><a href=""><i class="material-icons pink-text text-darken-4">warning</i>Mapa Zonas Rojas</a></li>
+          <li><a href=""><i class="material-icons pink-text text-darken-4">announcement</i>Comentarios</a></li>
+          <li><a href=""><i class="material-icons pink-text text-darken-4">contact_phone</i>Directorio</a></li>
+          <li><a href=""><i class="material-icons pink-text text-darken-4">info</i>Acerca de</a></li>
+        </ul>
+        <!-- LOGO  -->
+        <a href="#" class="brand-logo right">
+          <img src="" alt="">
+        </a>
+      </nav>
     </header>
 
     <div class="input-field col s12">
@@ -39,10 +39,17 @@
 
     <div id="map" class="map"></div>
 
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+
+
+    </script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtnI8JBt8dnOTNQfG4VCEEqytwEcCBk78&callback=initMap">
+
+
     </script>
     <script src="../js/jquery-3.2.1.min.js"></script>
     <script src="../js/materialize.min.js"></script>
     <script src="../js/mapa.js"></script>
 </body>
+
 </html>
