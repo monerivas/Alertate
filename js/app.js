@@ -2,7 +2,7 @@ console.log("js ligado");
 // Inicia funcionalidad MENU
 function avisoAlerta() {
   var config_alerta = $("#config_alerta").click(function () {
-    alert("Las alertas se han configurado exitosamente");
+    swal("Alertas Activadas", "", "success")
   });
 }
 
