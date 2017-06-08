@@ -1,24 +1,6 @@
-var cargarPagina = function () {
-	obtenerCoordendas();
-};
+console.log("js ligado");
 
-var obtenerCoordendas = function () {
-	var coordenadas = {
-        lat:19.4177435,
-        lng:-99.16479129999999
-	};
-	mostrarMapa(coordenadas);
-};
+// Inicia funcionalidad MENU
 
-var mostrarMapa = function (coordenadas) {
-	var map = new google.maps.Map($('#map')[0], {
-      zoom: 17,
-      center: coordenadas
-    });
-    var marker = new google.maps.Marker({
-      position: coordenadas,
-      map: map
-    });
-}
+// Termina funcionalidad MENU
 
-$(document).ready(cargarPagina);
