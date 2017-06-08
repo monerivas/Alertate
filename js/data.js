@@ -10,15 +10,15 @@ function Data(lat,lng) {
     this.lat = lat;
     this.lng = lng;     
 }
-    $("#vibrar").click(getLocation);
-    $("#vibrar").click(initMap);
+    $("#botonRojo").click(getLocation);
+/*    $("#botonRojo").click(initMap);*/
 function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
     } else { 
         x.innerHTML = "Geolocation is not supported by this browser.";
     }
-    vibracion(coordenadas);
+/*    vibracion(coordenadas);*/
 }
 
 function showPosition(position) {
@@ -28,4 +28,6 @@ function showPosition(position) {
     coordenadas.push(posicion);    
     localStorage.setItem("coordenadas", JSON.stringify(coordenadas));     
 }
-// var locations = JSON.parse(localStorage.getItem("coordenadas")); obtiene los objetos
+
+console.log("data ligada")
+/* var locations = JSON.parse(localStorage.getItem("coordenadas")); obtiene los objetos*/
